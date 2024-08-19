@@ -1,0 +1,77 @@
+{
+  "name": "ez-modal-snippets",
+  "displayName": "ez modal react snippets",
+  "description": "ez-modal-react's snippets",
+  "version": "0.0.1",
+  "publisher": "raotao",
+  "icon": "assets/logo.png",
+  "engines": {
+    "vscode": "^1.6.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "ez-modal-react",
+    "modal",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raotaohub/ez-modal-snippets"
+  },
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:typescriptReact",
+    "onLanguage:javascript",
+    "onLanguage:javascriptReact",
+    "onCommand:reactSnippets.search",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ez-modal-snippets.search",
+        "title": "ez-modal-snippets.search"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./out/snippets/preset.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./out/snippets/preset.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./out/snippets/preset.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./out/snippets/preset.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.6.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
